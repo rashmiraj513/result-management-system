@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+<section id="add-record">
+  <div class="container">
+    <a class="go-back" href="/teacher/dashboard">Back</a>
+  </div>
+  <div class="container align-items-center justify-content-center col-md-6 holder">
+    <h1 class="text-center">Add Result</h1>
+    <br>
+    <div>
+      <form method="POST" action="/teacher/add-result">
+        <div class="form-group">
+          <label for="addRoll">Roll No.</label>
+          <input type="number" id="addRoll" class="form-control" name="studentRollNo" placeholder="Enter Roll Number" min="1" max="99999999" required>
+        </div><br>
+        <div class="form-group">
+          <label for="addName">Name</label>
+          <input type="text" id="addName" class="form-control" name="studentName" placeholder="Enter the Name" minlength="3" required>
+        </div><br>
+        <div class="form-group">
+          <label for="addDOB">Date of Birth</label>
+          <input type="date" id="addDOB" class="form-control" name="studentDOB" placeholder="Enter the Date of Birth" min="1990-01-01" max="2020-01-01" required>
+        </div><br>
+        <div class="form-group">
+          <label for="addScore">Score</label>
+          <input type="number" id="addScore" class="form-control" name="studentScore" placeholder="Enter the Score" min="0" max="100" required>
+        </div><br>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+<%- include("partials/footer") %> 

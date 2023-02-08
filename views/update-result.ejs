@@ -1,0 +1,32 @@
+<%- include("partials/header") %>
+<section id="edit-result">
+  <div class="container">
+    <a class="go-back" href="/teacher/dashboard">Back</a>
+  </div>
+  <div class="container align-items-center justify-content-center col-md-6 holder">
+    <h1 class="text-center">Edit Result</h1>
+    <br>
+    <div>
+      <form method="POST">
+        <div class="form-group">
+          <label for="editRoll">Roll No.</label>
+          <input type="number" value="<%= result.rollNo %>" id="editRoll" class="form-control" name="rollNo" min="0" max="100" required>
+        </div><br>
+        <div class="form-group">
+          <label for="editName">Name</label>
+          <input type="text" value="<%= result.name %>" id="editName" class="form-control" name="name" minlength="3" required>
+        </div><br>
+        <div class="form-group">
+          <label for="editDOB">Date of Birth</label>
+          <input type="date" value="<%= result.dob %>" id="editDOB" class="form-control" name="dob" min="1990-01-01" max="2020-01-01" required>
+        </div><br>
+        <div class="form-group">
+          <label for="editScore">Score</label>
+          <input type="number" value="<%= result.score %>" id="editScore" class="form-control" name="score" min="0" max="100" required>
+        </div><br>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+    </div>
+  </div><br>
+</section>
+<%- include("partials/footer") %> 

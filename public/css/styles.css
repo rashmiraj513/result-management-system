@@ -1,0 +1,100 @@
+/* For home.ejs file */
+
+:root {
+  --primaryColor: #fff;
+  --primaryColorHighlighted: #14ffec;
+  --background: #3ddd99;
+  --backgroundBlack: #212121;
+  --green: #38ef7d;
+  --darkgreen: #8dc26f;
+  --purple: #a162e8;
+  --blue: #007bff;
+  --brown: #ff9068;
+  --pink: #eaafc8;
+  --black: #111;
+  --dangerRed: #dc3545;
+}
+
+body { font-family: 'Roboto', sans-serif; }
+
+.center { text-align: center; }
+
+.button-margin { margin: 0 5%; }
+
+button {
+  text-transform: none;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button, input { overflow: visible; }
+
+.holder{
+  background: #eef;
+  padding: 2%;
+  margin-top: 3%;
+  margin-bottom: 8%
+}
+
+input.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
+  border: 1px solid #dc3545;
+}
+
+input.ng-valid.ng-touched, select.ng-valid.ng-touched {
+  border: 1px solid #38ef7d;
+}
+
+.error{ color: #dc3545; }
+
+.success{ color: #38ef7d; }
+
+.go-back {
+  cursor: pointer;
+  margin: 1%;
+}
+
+.go-back:hover { color: #5edbb5; }
+
+html, body { height: 100%; }
+
+body { margin: 0; }
+
+.home-content {
+  padding-top: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin: 0;
+}
+
+.home-button {
+  display: flex;
+  justify-content: center;
+}
+
+.home-button a { text-decoration: none; }
+
+.heading-bg {
+  background-color: #bdebd9;
+  text-align: center;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: normal;
+  padding: 10px 0;
+  word-spacing: 1px;
+}
+
+/* */
+
+.result-head{
+  background: #5edbb5;
+  color: #fff;
+}
+
+.button-place {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

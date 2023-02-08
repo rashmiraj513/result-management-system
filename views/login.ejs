@@ -1,0 +1,37 @@
+<%- include("partials/header") %> 
+
+<section id="teacher-login">
+  <div class="container">
+    <div class="container"><br>
+      <a href="/" class="go-back">Back</a>
+    </div>
+  </div>
+  <div class="container align-items-center justify-content-center col-md-6">
+    <% if(success != '') { %>
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <%= success %>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <% } %>
+    
+    <!-- <br> -->
+    <div class="holder">
+      <h1 class="text-center">Teacher Login</h1>
+      <form method="POST" action="/teacher/login">
+        <div class="form-group">
+          <label for="teacherEmail">Email Address</label>
+          <input type="email" class="form-control" id="teacher-mail" name="teacherMail" placeholder="Enter Email Address" required>
+        </div>
+        <br>
+        <div class="form-group">
+          <label for="teacherPassword">Password</label>
+          <input type="password" class="form-control" id="teacher-password" name="teacherPassword" placeholder="Enter the Password" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+      </form>
+    </div>
+  </div><br>
+</section>
+
+<%- include("partials/footer") %> 

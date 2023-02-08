@@ -1,0 +1,29 @@
+{
+  "name": "nodejs-bench",
+  "version": "1.0.0",
+  "description": "In this Project, a Result Management System is created using NodeJS.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js --exec babel-node"
+  },
+  "keywords": [],
+  "author": "Rashmi Raj",
+  "license": "ISC",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.8.4",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "popups": "^1.1.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/node": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
+  }
+}

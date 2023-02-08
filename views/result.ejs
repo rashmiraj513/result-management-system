@@ -1,0 +1,70 @@
+<%- include("partials/header") %>
+<section id="student-result">
+  <div class="container">
+    <br><a class="go-back" href="/">Back</a>
+  </div>
+  <div class="container align-items-center justify-content-center col-md-6">
+    <div>
+      <% if(message != '') { %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <%= message %>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <% } %>
+    </div>
+    <% if(student == null) { %>
+      <div class="holder">
+        <h1 class="text-center">Get Result</h1>
+        <br/>
+        <div>
+          <form method="POST" action="/student/result">
+            <div class="form-group">
+              <label for="rollNumber">Roll No.</label>
+              <input type="number" class="form-control" id="rollNumber" name="studentRoll" formControlName="rollNo" placeholder="Enter Roll Number" min="1">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="dateOfBirth">Date of Birth</label>
+              <input type="date" class="form-control" id="dateOfBirth" name="studentDOB" formControlName="dob" placeholder="Enter Date of Birth" min="2000-01-01" max="2020-01-01">
+            </div><br>
+            <div class="button-place">
+              <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+              <button class="btn btn-outline-dark btn-lg" type="reset">Clear</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  
+  <% if(student != null) { %> 
+    <div class="container align-items-center justify-content-center col-md-6 holder">
+      <div class="text-center result-head">
+        <h2 class="text-center">Result</h2>
+      </div>
+      <br>
+      <table class="table table-striped">
+        <tbody>
+          <tr>
+            <td>Roll No.</td>
+            <td><%= student.rollNo %></td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td><%= student.name %></td>
+          </tr>
+          <tr>
+            <td>Date of Birth</td>
+            <td><%= student.dob %></td>
+          </tr>
+          <tr>
+            <td>Score</td>
+            <td><%= student.score %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% } %>
+  <br>
+</section>
+<%- include("partials/footer") %> 
